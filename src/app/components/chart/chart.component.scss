@@ -1,0 +1,103 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+:host ::ng-deep {
+  .apexcharts-title-text {
+    fill: #f5f5f5 !important;
+  }
+
+  .apexcharts-text {
+    fill: #f5f5f5;
+  }
+
+  .apexcharts-legend-text {
+    color: #f5f5f5 !important;
+  }
+
+  .apexcharts-theme-light {
+    color: #333 !important;
+  }
+}
+
+.loading-container {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(51, 51, 51, 0.9);
+  z-index: 9999;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+
+  @media (max-width: 1520px) {
+    width: 1100px;
+  }
+
+  @media (max-width: 1420px) {
+    width: 1000px;
+    margin-right: 50px;
+  }
+
+  @media (max-width: 1320px) {
+    width: 900px;
+  }
+
+  @media (max-width: 1220px) {
+    width: 800px;
+  }
+
+  @media (max-width: 1120px) {
+    width: 700px;
+  }
+
+  @media (max-width: 1020px) {
+    width: 700px;
+    margin-right: 20px;
+  }
+
+  @media (max-width: 960px) {
+    width: 600px;
+  }
+
+  @media (max-width: 860px) {
+    width: 500px;
+  }
+
+  @media (max-width: 720px) {
+    width: 300px;
+  }
+}

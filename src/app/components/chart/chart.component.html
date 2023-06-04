@@ -1,0 +1,21 @@
+
+<div class="container">
+  <div *ngIf="loading$ | async" class="loading-container">
+    <div class="lds-dual-ring"></div>
+  </div>
+  <ng-container *ngIf="(chartModel$ | async) as chartOptions">
+    <div id="chart" class="d-block">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [yaxis]="chartOptions.yaxis"
+        [title]="chartOptions.title"
+      ></apx-chart>
+    </div>
+    <div class="w-25 d-flex flex-column">
+      <label class="mr-3">Prediction hours: {{ predictionHour$ | async }}</label>
+      <input class="mt-2" type="range" min="1" max="40" [value]="predictionHour$ | async" (change)="onPredictionHourChange($event)">
+    </div>
+  </ng-container>
+</div>
